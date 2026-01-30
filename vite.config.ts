@@ -10,11 +10,18 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0',
+    host: true,
     port: 3333,
     allowedHosts: true,
     headers: {
       'Content-Security-Policy': "frame-ancestors *",
+    },
+    hmr: {
+      host: 'localhost',
+      clientPort: 3333,
+    },
+    watch: {
+      usePolling: true,
     },
   },
   build: {
