@@ -1711,11 +1711,422 @@ function AutomationWorkflows() {
 }
 
 // =============================================================================
+// Settings Panel Component
+// =============================================================================
+
+const SettingsPanel = () => {
+  const [settings, setSettings] = useState({
+    // Profile Settings
+    fullName: 'John Smith',
+    email: 'john@acmecorp.com',
+    jobTitle: 'Sales Director',
+    company: 'Acme Corp',
+
+    // Integration Settings
+    gmailConnected: true,
+    linkedinConnected: true,
+    calendlyConnected: true,
+    hubspotConnected: false,
+
+    // Campaign Settings
+    dailyLinkedinLimit: 50,
+    emailSignature: 'Best regards,\nJohn Smith\nSales Director, Acme Corp',
+    defaultCampaignLens: 'growth',
+    autoFailover: true,
+
+    // Notification Settings
+    emailNotifications: true,
+    slackNotifications: false,
+    weeklyReports: true,
+
+    // Agent Settings
+    digitalTwinEnabled: true,
+    linkedinMonitorEnabled: true,
+    autoResponseEnabled: false,
+
+    // API Keys
+    apolloApiKey: '••••••••••••••••',
+    clayApiKey: '••••••••••••••••',
+    instantlyApiKey: '••••••••••••••••'
+  })
+
+  const [saving, setSaving] = useState(false)
+  const [activeTab, setActiveTab] = useState('profile')
+
+  const handleSaveSettings = async () => {
+    setSaving(true)
+    // Simulate save
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setSaving(false)
+  }
+
+  const handleConnectIntegration = async (integration: string) => {
+    console.log(`Connecting ${integration} - OAuth handled by agent`)
+    // Agent handles OAuth
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-100">Settings</h2>
+          <p className="text-sm text-gray-400 mt-1">Manage your account, integrations, and preferences</p>
+        </div>
+        <Button onClick={handleSaveSettings} disabled={saving} className="bg-[#71514F] hover:bg-[#5a403e]">
+          {saving ? (
+            <>
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              Saving...
+            </>
+          ) : (
+            <>
+              <Save className="h-4 w-4 mr-2" />
+              Save Changes
+            </>
+          )}
+        </Button>
+      </div>
+
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="bg-gray-800 border-gray-700">
+          <TabsTrigger value="profile" className="data-[state=active]:bg-[#71514F]">Profile</TabsTrigger>
+          <TabsTrigger value="integrations" className="data-[state=active]:bg-[#71514F]">Integrations</TabsTrigger>
+          <TabsTrigger value="campaigns" className="data-[state=active]:bg-[#71514F]">Campaigns</TabsTrigger>
+          <TabsTrigger value="agents" className="data-[state=active]:bg-[#71514F]">Agents</TabsTrigger>
+          <TabsTrigger value="notifications" className="data-[state=active]:bg-[#71514F]">Notifications</TabsTrigger>
+          <TabsTrigger value="api" className="data-[state=active]:bg-[#71514F]">API Keys</TabsTrigger>
+        </TabsList>
+
+        {/* Profile Settings */}
+        <TabsContent value="profile" className="space-y-4 mt-6">
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-gray-100">Profile Information</CardTitle>
+              <CardDescription className="text-gray-400">Update your personal details</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label className="text-gray-300">Full Name</Label>
+                  <Input
+                    value={settings.fullName}
+                    onChange={(e) => setSettings({ ...settings, fullName: e.target.value })}
+                    className="bg-gray-900 border-gray-700 text-gray-100"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label className="text-gray-300">Email</Label>
+                  <Input
+                    value={settings.email}
+                    onChange={(e) => setSettings({ ...settings, email: e.target.value })}
+                    className="bg-gray-900 border-gray-700 text-gray-100"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label className="text-gray-300">Job Title</Label>
+                  <Input
+                    value={settings.jobTitle}
+                    onChange={(e) => setSettings({ ...settings, jobTitle: e.target.value })}
+                    className="bg-gray-900 border-gray-700 text-gray-100"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label className="text-gray-300">Company</Label>
+                  <Input
+                    value={settings.company}
+                    onChange={(e) => setSettings({ ...settings, company: e.target.value })}
+                    className="bg-gray-900 border-gray-700 text-gray-100"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Integrations Settings */}
+        <TabsContent value="integrations" className="space-y-4 mt-6">
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-gray-100">Connected Integrations</CardTitle>
+              <CardDescription className="text-gray-400">Manage your third-party connections</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {[
+                { id: 'gmail', name: 'Gmail', icon: Mail, connected: settings.gmailConnected, color: 'red' },
+                { id: 'linkedin', name: 'LinkedIn', icon: Linkedin, connected: settings.linkedinConnected, color: 'blue' },
+                { id: 'calendly', name: 'Calendly', icon: Calendar, connected: settings.calendlyConnected, color: 'blue' },
+                { id: 'hubspot', name: 'HubSpot', icon: Database, connected: settings.hubspotConnected, color: 'orange' }
+              ].map((integration) => {
+                const Icon = integration.icon
+                return (
+                  <div key={integration.id} className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                    <div className="flex items-center gap-3">
+                      <div className={cn(
+                        'h-10 w-10 rounded-lg flex items-center justify-center',
+                        integration.color === 'red' && 'bg-red-500/10',
+                        integration.color === 'blue' && 'bg-blue-500/10',
+                        integration.color === 'orange' && 'bg-orange-500/10'
+                      )}>
+                        <Icon className={cn(
+                          'h-5 w-5',
+                          integration.color === 'red' && 'text-red-400',
+                          integration.color === 'blue' && 'text-blue-400',
+                          integration.color === 'orange' && 'text-orange-400'
+                        )} />
+                      </div>
+                      <div>
+                        <div className="font-medium text-gray-100">{integration.name}</div>
+                        <div className="text-xs text-gray-400">
+                          {integration.connected ? 'Connected' : 'Not connected'}
+                        </div>
+                      </div>
+                    </div>
+                    {integration.connected ? (
+                      <Badge variant="outline" className="bg-green-500/10 text-green-400 border-green-500/20">
+                        <CheckCircle className="h-3 w-3 mr-1" />
+                        Connected
+                      </Badge>
+                    ) : (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleConnectIntegration(integration.name)}
+                        className="border-[#71514F] text-[#71514F] hover:bg-[#71514F] hover:text-white"
+                      >
+                        Connect
+                      </Button>
+                    )}
+                  </div>
+                )
+              })}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Campaign Settings */}
+        <TabsContent value="campaigns" className="space-y-4 mt-6">
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-gray-100">Campaign Defaults</CardTitle>
+              <CardDescription className="text-gray-400">Configure default campaign behavior</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <Label className="text-gray-300">Daily LinkedIn Message Limit</Label>
+                  <span className="text-sm text-gray-400">{settings.dailyLinkedinLimit} messages/day</span>
+                </div>
+                <Slider
+                  value={[settings.dailyLinkedinLimit]}
+                  onValueChange={(value) => setSettings({ ...settings, dailyLinkedinLimit: value[0] })}
+                  min={10}
+                  max={100}
+                  step={5}
+                  className="w-full"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label className="text-gray-300">Default Campaign Lens</Label>
+                <Select value={settings.defaultCampaignLens} onValueChange={(value) => setSettings({ ...settings, defaultCampaignLens: value })}>
+                  <SelectTrigger className="bg-gray-900 border-gray-700 text-gray-100">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent className="bg-gray-800 border-gray-700">
+                    <SelectItem value="efficiency">Efficiency</SelectItem>
+                    <SelectItem value="growth">Growth</SelectItem>
+                    <SelectItem value="disruptor">Disruptor</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label className="text-gray-300">Email Signature</Label>
+                <Textarea
+                  value={settings.emailSignature}
+                  onChange={(e) => setSettings({ ...settings, emailSignature: e.target.value })}
+                  className="bg-gray-900 border-gray-700 text-gray-100"
+                  rows={4}
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div>
+                  <div className="font-medium text-gray-100">Auto-Failover to Email</div>
+                  <div className="text-xs text-gray-400 mt-1">Automatically send emails when LinkedIn limits reached</div>
+                </div>
+                <Switch
+                  checked={settings.autoFailover}
+                  onCheckedChange={(checked) => setSettings({ ...settings, autoFailover: checked })}
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Agent Settings */}
+        <TabsContent value="agents" className="space-y-4 mt-6">
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-gray-100">AI Agent Configuration</CardTitle>
+              <CardDescription className="text-gray-400">Control autonomous agent behavior</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div className="flex items-center gap-3">
+                  <Brain className="h-5 w-5 text-purple-400" />
+                  <div>
+                    <div className="font-medium text-gray-100">Digital Twin Agent</div>
+                    <div className="text-xs text-gray-400 mt-1">Autonomously manages LinkedIn connections</div>
+                  </div>
+                </div>
+                <Switch
+                  checked={settings.digitalTwinEnabled}
+                  onCheckedChange={(checked) => setSettings({ ...settings, digitalTwinEnabled: checked })}
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div className="flex items-center gap-3">
+                  <Bell className="h-5 w-5 text-blue-400" />
+                  <div>
+                    <div className="font-medium text-gray-100">LinkedIn Monitor Agent</div>
+                    <div className="text-xs text-gray-400 mt-1">Detects ICP signals and opportunities</div>
+                  </div>
+                </div>
+                <Switch
+                  checked={settings.linkedinMonitorEnabled}
+                  onCheckedChange={(checked) => setSettings({ ...settings, linkedinMonitorEnabled: checked })}
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div className="flex items-center gap-3">
+                  <MessageSquare className="h-5 w-5 text-green-400" />
+                  <div>
+                    <div className="font-medium text-gray-100">Auto-Response (Experimental)</div>
+                    <div className="text-xs text-gray-400 mt-1">Automatically respond to qualified leads</div>
+                  </div>
+                </div>
+                <Switch
+                  checked={settings.autoResponseEnabled}
+                  onCheckedChange={(checked) => setSettings({ ...settings, autoResponseEnabled: checked })}
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Notifications Settings */}
+        <TabsContent value="notifications" className="space-y-4 mt-6">
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-gray-100">Notification Preferences</CardTitle>
+              <CardDescription className="text-gray-400">Choose how you want to be notified</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div>
+                  <div className="font-medium text-gray-100">Email Notifications</div>
+                  <div className="text-xs text-gray-400 mt-1">Receive campaign updates via email</div>
+                </div>
+                <Switch
+                  checked={settings.emailNotifications}
+                  onCheckedChange={(checked) => setSettings({ ...settings, emailNotifications: checked })}
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div>
+                  <div className="font-medium text-gray-100">Slack Notifications</div>
+                  <div className="text-xs text-gray-400 mt-1">Get real-time alerts in Slack</div>
+                </div>
+                <Switch
+                  checked={settings.slackNotifications}
+                  onCheckedChange={(checked) => setSettings({ ...settings, slackNotifications: checked })}
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div>
+                  <div className="font-medium text-gray-100">Weekly Reports</div>
+                  <div className="text-xs text-gray-400 mt-1">Receive performance summaries every Monday</div>
+                </div>
+                <Switch
+                  checked={settings.weeklyReports}
+                  onCheckedChange={(checked) => setSettings({ ...settings, weeklyReports: checked })}
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* API Keys Settings */}
+        <TabsContent value="api" className="space-y-4 mt-6">
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-gray-100">API Keys</CardTitle>
+              <CardDescription className="text-gray-400">Manage your external service API keys</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {[
+                { name: 'Apollo API Key', key: 'apolloApiKey', service: 'Apollo.io' },
+                { name: 'Clay API Key', key: 'clayApiKey', service: 'Clay' },
+                { name: 'Instantly.ai API Key', key: 'instantlyApiKey', service: 'Instantly.ai' }
+              ].map((apiKey) => (
+                <div key={apiKey.key} className="space-y-2">
+                  <Label className="text-gray-300">{apiKey.name}</Label>
+                  <div className="flex gap-2">
+                    <Input
+                      type="password"
+                      value={settings[apiKey.key as keyof typeof settings] as string}
+                      className="bg-gray-900 border-gray-700 text-gray-100 flex-1"
+                      readOnly
+                    />
+                    <Button variant="outline" size="sm" className="border-gray-600 text-gray-300">
+                      <Eye className="h-4 w-4" />
+                    </Button>
+                    <Button variant="outline" size="sm" className="border-gray-600 text-gray-300">
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+                  <p className="text-xs text-gray-500">Used for {apiKey.service} integration</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
+
+// =============================================================================
 // Main Component
 // =============================================================================
 
 export default function Home() {
   const [activeScreen, setActiveScreen] = useState('mission-control')
+  const [workspaceOpen, setWorkspaceOpen] = useState(false)
+  const [currentUser, setCurrentUser] = useState({
+    name: 'John Smith',
+    email: 'john@acmecorp.com',
+    avatar: 'https://ui-avatars.com/api/?name=John+Smith&background=71514F&color=fff',
+    workspace: 'Acme Corp - Sales',
+    role: 'Sales Director'
+  })
+  const [workspaces] = useState([
+    { id: 1, name: 'Acme Corp - Sales', role: 'Sales Director', members: 8 },
+    { id: 2, name: 'Acme Corp - Marketing', role: 'Viewer', members: 12 },
+    { id: 3, name: 'Personal Workspace', role: 'Owner', members: 1 }
+  ])
+
+  const handleGoogleLogin = async () => {
+    // Agent handles OAuth - just simulate login success
+    console.log('Google login initiated - OAuth handled by agent')
+  }
 
   return (
     <div className="min-h-screen bg-[#27272A]">
@@ -1738,7 +2149,112 @@ export default function Home() {
                 <Activity className="h-3 w-3 mr-1 animate-pulse" />
                 24 Agents Active
               </Badge>
-              <Button variant="outline" size="sm" className="border-gray-600 text-gray-300">
+
+              {/* Workspace Selector */}
+              <div className="relative">
+                <button
+                  onClick={() => setWorkspaceOpen(!workspaceOpen)}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors border border-gray-700"
+                >
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={currentUser.avatar}
+                      alt={currentUser.name}
+                      className="h-6 w-6 rounded-full"
+                    />
+                    <div className="text-left hidden md:block">
+                      <div className="text-xs font-medium text-gray-200">{currentUser.name}</div>
+                      <div className="text-[10px] text-gray-400">{currentUser.workspace}</div>
+                    </div>
+                  </div>
+                  {workspaceOpen ? (
+                    <ChevronUp className="h-4 w-4 text-gray-400" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4 text-gray-400" />
+                  )}
+                </button>
+
+                {/* Workspace Dropdown */}
+                {workspaceOpen && (
+                  <div className="absolute right-0 mt-2 w-72 bg-gray-800 border border-gray-700 rounded-lg shadow-xl z-50">
+                    <div className="p-4 border-b border-gray-700">
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={currentUser.avatar}
+                          alt={currentUser.name}
+                          className="h-12 w-12 rounded-full"
+                        />
+                        <div className="flex-1">
+                          <div className="font-medium text-gray-100">{currentUser.name}</div>
+                          <div className="text-xs text-gray-400">{currentUser.email}</div>
+                          <div className="text-xs text-gray-500 mt-1">{currentUser.role}</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-2">
+                      <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                        Switch Workspace
+                      </div>
+                      {workspaces.map((ws) => (
+                        <button
+                          key={ws.id}
+                          onClick={() => {
+                            setCurrentUser({ ...currentUser, workspace: ws.name, role: ws.role })
+                            setWorkspaceOpen(false)
+                          }}
+                          className={cn(
+                            'w-full flex items-center justify-between px-3 py-2 rounded-md text-sm transition-colors',
+                            ws.name === currentUser.workspace
+                              ? 'bg-[#71514F] text-white'
+                              : 'text-gray-300 hover:bg-gray-700'
+                          )}
+                        >
+                          <div className="flex items-center gap-2">
+                            <div className="h-8 w-8 rounded-md bg-gray-700 flex items-center justify-center">
+                              <Users className="h-4 w-4 text-gray-400" />
+                            </div>
+                            <div className="text-left">
+                              <div className="font-medium">{ws.name}</div>
+                              <div className="text-xs text-gray-400">{ws.role} • {ws.members} members</div>
+                            </div>
+                          </div>
+                          {ws.name === currentUser.workspace && (
+                            <CheckCircle className="h-4 w-4 text-green-400" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+
+                    <div className="p-2 border-t border-gray-700">
+                      <button
+                        onClick={() => {
+                          setActiveScreen('workspace')
+                          setWorkspaceOpen(false)
+                        }}
+                        className="w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700 transition-colors"
+                      >
+                        <Settings className="h-4 w-4" />
+                        Manage Workspaces
+                      </button>
+                      <button
+                        onClick={handleGoogleLogin}
+                        className="w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700 transition-colors mt-1"
+                      >
+                        <UserPlus className="h-4 w-4" />
+                        Connect Google Account
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                onClick={() => setActiveScreen('settings')}
+              >
                 <Settings className="h-4 w-4" />
               </Button>
             </div>
@@ -1798,12 +2314,7 @@ export default function Home() {
           {activeScreen === 'linkedin-monitor' && <LinkedInMonitorFeed />}
           {activeScreen === 'automation' && <AutomationWorkflows />}
           {activeScreen === 'workspace' && <WorkspaceManagement />}
-          {activeScreen === 'settings' && (
-            <div>
-              <h2 className="text-2xl font-bold text-gray-100 mb-6">Settings</h2>
-              <p className="text-gray-400">Settings panel coming soon</p>
-            </div>
-          )}
+          {activeScreen === 'settings' && <SettingsPanel />}
         </main>
       </div>
 
