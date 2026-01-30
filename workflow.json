@@ -210,6 +210,69 @@
     "domain_managers": ["Signal Processing Manager", "Outreach Manager", "Safety Manager"],
     "sub_agents": 9,
     "independent_agents": 5,
-    "total_agents": 18
-  }
+    "autonomous_agents": 6,
+    "total_agents": 24
+  },
+  "autonomous_agents": [
+    {
+      "agent_id": "697cc3a45e4abfa0b0e16db1",
+      "name": "Perplexity Research Agent",
+      "type": "Autonomous",
+      "description": "Deep web research using Perplexity API for real-time market intelligence, competitor analysis, and ICP insights",
+      "model": "gpt-4o-mini",
+      "provider": "OpenAI",
+      "temperature": 0.3,
+      "tools": []
+    },
+    {
+      "agent_id": "697cc3bd5e4abfa0b0e16db2",
+      "name": "Clay Enrichment Agent",
+      "type": "Autonomous",
+      "description": "Advanced lead enrichment using Clay waterfall enrichment for comprehensive firmographic and contact data",
+      "model": "gpt-4o-mini",
+      "provider": "OpenAI",
+      "temperature": 0.2,
+      "tools": []
+    },
+    {
+      "agent_id": "697cc3d35e4abfa0b0e16db7",
+      "name": "Google Calendar Sync Agent",
+      "type": "Autonomous",
+      "description": "Bidirectional Google Calendar integration for intelligent meeting scheduling and calendar management",
+      "model": "gpt-4o-mini",
+      "provider": "OpenAI",
+      "temperature": 0.1,
+      "tools": ["googlecalendar"]
+    },
+    {
+      "agent_id": "697cc40d7601d4aab0edc562",
+      "name": "Digital Twin LinkedIn Agent",
+      "type": "Autonomous",
+      "description": "AI clone that manages LinkedIn connections, sends connection requests, and nurtures relationships authentically in your voice",
+      "model": "gpt-4.1",
+      "provider": "OpenAI",
+      "temperature": 0.7,
+      "tools": []
+    },
+    {
+      "agent_id": "697cc424d36f070193f5c022",
+      "name": "LinkedIn Monitor & Response Agent",
+      "type": "Autonomous",
+      "description": "Continuously monitors LinkedIn for ICP activity (posts, comments, job changes) and responds intelligently to start conversations",
+      "model": "gpt-4.1",
+      "provider": "OpenAI",
+      "temperature": 0.6,
+      "tools": []
+    },
+    {
+      "agent_id": "697cc439066158e77fde4634",
+      "name": "MoltBot Automation Agent",
+      "type": "Autonomous",
+      "description": "Workflow automation agent that handles repetitive tasks, data sync, and cross-platform orchestration",
+      "model": "gpt-4o-mini",
+      "provider": "OpenAI",
+      "temperature": 0.1,
+      "tools": ["hubspot"]
+    }
+  ]
 }

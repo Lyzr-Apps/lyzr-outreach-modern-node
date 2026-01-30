@@ -1,0 +1,57 @@
+{
+  "agent_name": "LinkedIn Monitor & Response Agent",
+  "agent_id": "697cc424d36f070193f5c022",
+  "agent_purpose": "analyzer",
+  "description": "Monitors LinkedIn activity and suggests intelligent engagement responses",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "signal_detected": "boolean",
+      "signal_type": "null",
+      "icp_name": "string",
+      "icp_company": "string",
+      "opportunity_score": "number",
+      "suggested_response": "string",
+      "engagement_rationale": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "signal_detected": false,
+      "signal_type": null,
+      "icp_name": "",
+      "icp_company": "",
+      "opportunity_score": 0,
+      "suggested_response": "",
+      "engagement_rationale": ""
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Monitor & Response Agent",
+      "timestamp": "2024-06-17T10:24:32Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T14:46:03.285080",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "signal_detected": false,
+      "signal_type": null,
+      "icp_name": "",
+      "icp_company": "",
+      "opportunity_score": 0,
+      "suggested_response": "",
+      "engagement_rationale": ""
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Monitor & Response Agent",
+      "timestamp": "2024-06-17T10:24:32Z"
+    }
+  }
+}

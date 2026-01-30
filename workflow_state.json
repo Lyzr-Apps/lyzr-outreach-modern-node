@@ -2,7 +2,7 @@
   "step": "agent_creation",
   "status": "complete",
   "timestamp": "2026-01-30T00:00:00Z",
-  "agents_created": 18,
+  "agents_created": 24,
   "agents": {
     "mission_controller": "697ca914066158e77fde4351",
     "signal_processing_manager": "697ca8c55e4abfa0b0e16af6",
@@ -22,7 +22,13 @@
     "linkedin_delivery_agent": "697ca86ed36f070193f5bd58",
     "instantly_ai_failover_agent": "697ca8815e4abfa0b0e16aec",
     "response_classifier_agent": "697ca896066158e77fde4343",
-    "meeting_scheduler_agent": "697ca8abd36f070193f5bd59"
+    "meeting_scheduler_agent": "697ca8abd36f070193f5bd59",
+    "perplexity_research_agent": "697cc3a45e4abfa0b0e16db1",
+    "clay_enrichment_agent": "697cc3bd5e4abfa0b0e16db2",
+    "google_calendar_sync_agent": "697cc3d35e4abfa0b0e16db7",
+    "digital_twin_linkedin_agent": "697cc40d7601d4aab0edc562",
+    "linkedin_monitor_response_agent": "697cc424d36f070193f5c022",
+    "moltbot_automation_agent": "697cc439066158e77fde4634"
   },
   "knowledge_bases": {
     "context_board_signal_intelligence": {
@@ -34,6 +40,6 @@
       "rag_name": "contextboardoutreachcreativefe6x"
     }
   },
-  "response_schemas_saved": 18,
+  "response_schemas_saved": 24,
   "next_step": "agent_testing"
 }

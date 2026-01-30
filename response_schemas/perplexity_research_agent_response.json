@@ -1,0 +1,73 @@
+{
+  "agent_name": "Perplexity Research Agent",
+  "agent_id": "697cc3a45e4abfa0b0e16db1",
+  "agent_purpose": "research",
+  "description": "Conducts deep web research and returns market intelligence with sources",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "research_summary": "string",
+      "key_findings": [
+        "string"
+      ],
+      "competitive_landscape": "string",
+      "strategic_opportunities": "string",
+      "data_sources": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "research_summary": "A review of the current market trends in electric vehicles illustrates a significant shift towards sustainable practices and technology advancements, driven by increasing consumer demand and regulatory pressures.",
+      "key_findings": [
+        "Electric vehicle sales have surged by over 70% in the last year.",
+        "Major automakers are investing heavily in battery technology, with a focus on reducing costs and improving range.",
+        "Government incentives are boosting consumer purchases, especially in Europe and North America.",
+        "Emerging companies are challenging established players by offering innovative solutions in battery recycling and energy management."
+      ],
+      "competitive_landscape": "The electric vehicle market is becoming increasingly competitive, with established brands like Tesla facing pressure from new entrants and traditional automakers pivoting towards electric models. Companies that leverage technology and sustainability are likely to gain a competitive edge.",
+      "strategic_opportunities": "Investing in battery technology and partnerships for charging infrastructure can provide significant competitive advantages. Additionally, focusing on vehicles tailored for urban environments may capture an underserved market segment.",
+      "data_sources": [
+        "https://www.reuters.com/business/autos-transportation/electric-vehicle-sales-report-2023-10-15/",
+        "https://www.forbes.com/sites/forbestechcouncil/2023/09/30/the-future-of-electric-vehicles-where-are-we-headed/?sh=6e1a3e4a32af",
+        "https://www.bbc.com/news/business-66954545"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Perplexity Research Agent",
+      "timestamp": "2023-10-20T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T14:44:01.332207",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "research_summary": "A review of the current market trends in electric vehicles illustrates a significant shift towards sustainable practices and technology advancements, driven by increasing consumer demand and regulatory pressures.",
+      "key_findings": [
+        "Electric vehicle sales have surged by over 70% in the last year.",
+        "Major automakers are investing heavily in battery technology, with a focus on reducing costs and improving range.",
+        "Government incentives are boosting consumer purchases, especially in Europe and North America.",
+        "Emerging companies are challenging established players by offering innovative solutions in battery recycling and energy management."
+      ],
+      "competitive_landscape": "The electric vehicle market is becoming increasingly competitive, with established brands like Tesla facing pressure from new entrants and traditional automakers pivoting towards electric models. Companies that leverage technology and sustainability are likely to gain a competitive edge.",
+      "strategic_opportunities": "Investing in battery technology and partnerships for charging infrastructure can provide significant competitive advantages. Additionally, focusing on vehicles tailored for urban environments may capture an underserved market segment.",
+      "data_sources": [
+        "https://www.reuters.com/business/autos-transportation/electric-vehicle-sales-report-2023-10-15/",
+        "https://www.forbes.com/sites/forbestechcouncil/2023/09/30/the-future-of-electric-vehicles-where-are-we-headed/?sh=6e1a3e4a32af",
+        "https://www.bbc.com/news/business-66954545"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Perplexity Research Agent",
+      "timestamp": "2023-10-20T12:00:00Z"
+    }
+  }
+}

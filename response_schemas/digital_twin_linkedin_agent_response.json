@@ -1,0 +1,51 @@
+{
+  "agent_name": "Digital Twin LinkedIn Agent",
+  "agent_id": "697cc40d7601d4aab0edc562",
+  "agent_purpose": "assistant",
+  "description": "Manages LinkedIn connections and engagement with human-like authenticity",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "action_taken": "string",
+      "connection_status": "string",
+      "engagement_type": "string",
+      "personalized_message": "string",
+      "connection_quality_score": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "action_taken": "connection_request",
+      "connection_status": "pending",
+      "engagement_type": "null",
+      "personalized_message": "Hi there, I came across your profile and was impressed by your work in the industry. I'd love to connect and exchange insights. Looking forward to learning from your experiences!",
+      "connection_quality_score": "0.85"
+    },
+    "metadata": {
+      "agent_name": "Digital Twin LinkedIn Agent",
+      "timestamp": "2024-06-15T10:22:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T14:45:42.940778",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "action_taken": "connection_request",
+      "connection_status": "pending",
+      "engagement_type": "null",
+      "personalized_message": "Hi there, I came across your profile and was impressed by your work in the industry. I'd love to connect and exchange insights. Looking forward to learning from your experiences!",
+      "connection_quality_score": "0.85"
+    },
+    "metadata": {
+      "agent_name": "Digital Twin LinkedIn Agent",
+      "timestamp": "2024-06-15T10:22:00Z"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "agent_name": "MoltBot Automation Agent",
+  "agent_id": "697cc439066158e77fde4634",
+  "agent_purpose": "assistant",
+  "description": "Automates workflows and data synchronization across platforms",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "workflow_name": "string",
+      "status": "string",
+      "records_processed": "number",
+      "errors": [
+        "any"
+      ],
+      "sync_summary": {
+        "created": "number",
+        "updated": "number",
+        "duplicates_merged": "number"
+      },
+      "next_scheduled_run": "null"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "workflow_name": "Sample Workflow",
+      "status": "completed",
+      "records_processed": 0,
+      "errors": [],
+      "sync_summary": {
+        "created": 0,
+        "updated": 0,
+        "duplicates_merged": 0
+      },
+      "next_scheduled_run": null
+    },
+    "metadata": {
+      "agent_name": "MoltBot Automation Agent",
+      "timestamp": "2023-10-10T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T14:46:26.233613",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "workflow_name": "Sample Workflow",
+      "status": "completed",
+      "records_processed": 0,
+      "errors": [],
+      "sync_summary": {
+        "created": 0,
+        "updated": 0,
+        "duplicates_merged": 0
+      },
+      "next_scheduled_run": null
+    },
+    "metadata": {
+      "agent_name": "MoltBot Automation Agent",
+      "timestamp": "2023-10-10T12:00:00Z"
+    }
+  }
+}

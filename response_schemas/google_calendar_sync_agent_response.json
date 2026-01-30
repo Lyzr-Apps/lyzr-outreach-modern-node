@@ -1,0 +1,55 @@
+{
+  "agent_name": "Google Calendar Sync Agent",
+  "agent_id": "697cc3d35e4abfa0b0e16db7",
+  "agent_purpose": "assistant",
+  "description": "Schedules meetings and manages calendar events with timezone awareness",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "proposed_times": [
+        "any"
+      ],
+      "calendar_event_id": "null",
+      "meeting_link": "null",
+      "attendees": [
+        "any"
+      ],
+      "event_status": "null"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "proposed_times": [],
+      "calendar_event_id": null,
+      "meeting_link": null,
+      "attendees": [],
+      "event_status": null
+    },
+    "metadata": {
+      "agent_name": "Google Calendar Sync Agent",
+      "timestamp": "2023-10-06T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T14:44:43.177009",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "proposed_times": [],
+      "calendar_event_id": null,
+      "meeting_link": null,
+      "attendees": [],
+      "event_status": null
+    },
+    "metadata": {
+      "agent_name": "Google Calendar Sync Agent",
+      "timestamp": "2023-10-06T12:00:00Z"
+    }
+  }
+}
