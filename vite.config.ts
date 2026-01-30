@@ -12,6 +12,7 @@ export default defineConfig({
   server: {
     host: true,
     port: 3333,
+    strictPort: true,
     allowedHosts: true,
     headers: {
       'Content-Security-Policy': "frame-ancestors *",
@@ -19,10 +20,20 @@ export default defineConfig({
     hmr: {
       host: 'localhost',
       clientPort: 3333,
+      overlay: false,
     },
     watch: {
       usePolling: true,
+      interval: 1000,
     },
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'lucide-react',
+    ],
   },
   build: {
     outDir: 'dist',
