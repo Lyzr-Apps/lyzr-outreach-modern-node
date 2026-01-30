@@ -1,0 +1,72 @@
+{
+  "agent_name": "Clawdbot Vibe Checker",
+  "agent_id": "697ca7edd36f070193f5bd3f",
+  "agent_purpose": "analyzer",
+  "description": "Style DNA quality gate with violation detection and recommendations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "verdict": "string",
+      "violations": [
+        {
+          "type": "string",
+          "detail": "string"
+        }
+      ],
+      "style_dna_match_score": "string",
+      "recommendations": [
+        "string"
+      ],
+      "audit_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "verdict": "fail",
+      "violations": [
+        {
+          "type": "style_mismatch",
+          "detail": "Input lacks a clear draft to analyze"
+        }
+      ],
+      "style_dna_match_score": "0",
+      "recommendations": [
+        "Provide a specific message draft for analysis."
+      ],
+      "audit_summary": "The input does not contain any content to audit against the checklist."
+    },
+    "metadata": {
+      "agent_name": "Clawdbot Vibe Checker",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:58:40.558268",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "verdict": "fail",
+      "violations": [
+        {
+          "type": "style_mismatch",
+          "detail": "Input lacks a clear draft to analyze"
+        }
+      ],
+      "style_dna_match_score": "0",
+      "recommendations": [
+        "Provide a specific message draft for analysis."
+      ],
+      "audit_summary": "The input does not contain any content to audit against the checklist."
+    },
+    "metadata": {
+      "agent_name": "Clawdbot Vibe Checker",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "agent_name": "LinkedIn Delivery Agent",
+  "agent_id": "697ca86ed36f070193f5bd58",
+  "agent_purpose": "assistant",
+  "description": "Execute approved DMs with timing delays and proxy usage",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "delivery_status": "string",
+      "message_id": "string",
+      "recipient": "string",
+      "sent_at": "string",
+      "timing_delay_applied": "number",
+      "proxy_used": "boolean",
+      "delivery_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "delivery_status": "failed",
+      "message_id": "N/A",
+      "recipient": "N/A",
+      "sent_at": "N/A",
+      "timing_delay_applied": 0,
+      "proxy_used": false,
+      "delivery_summary": "Sample response request cannot be processed."
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Delivery Agent",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:59:29.587948",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "delivery_status": "failed",
+      "message_id": "N/A",
+      "recipient": "N/A",
+      "sent_at": "N/A",
+      "timing_delay_applied": 0,
+      "proxy_used": false,
+      "delivery_summary": "Sample response request cannot be processed."
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Delivery Agent",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  }
+}

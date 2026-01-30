@@ -1,0 +1,28 @@
+{
+  "agent_name": "Response Classifier Agent",
+  "agent_id": "697ca896066158e77fde4343",
+  "test_message": "Classify response: 'Interesting timing - we're actually evaluating options now. What's your availability next week?'",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-30T12:56:52.634051",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "classification": "Hand-raiser",
+      "confidence_score": 90,
+      "sentiment": "positive",
+      "key_signals": [
+        "evaluating options",
+        "availability next week"
+      ],
+      "recommended_action": "Schedule a meeting for next week.",
+      "classification_summary": "The response indicates a high level of interest as they are currently evaluating options and asking for availability."
+    },
+    "metadata": {
+      "agent_name": "Response Classifier Agent",
+      "timestamp": "2023-10-05T12:45:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"classification\": \"Hand-raiser\",\n    \"confidence_score\": 90,\n    \"sentiment\": \"positive\",\n    \"key_signals\": [\"evaluating options\", \"availability next week\"],\n    \"recommended_action\": \"Schedule a meeting for next week.\",\n    \"classification_summary\": \"The response indicates a high level of interest as they are currently evaluating options and asking for availability.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Response Classifier Agent\",\n    \"timestamp\": \"2023-10-05T12:45:00Z\"\n  }\n}"
+}

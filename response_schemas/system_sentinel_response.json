@@ -1,0 +1,75 @@
+{
+  "agent_name": "System Sentinel",
+  "agent_id": "697ca81ad36f070193f5bd4e",
+  "agent_purpose": "analyzer",
+  "description": "Rate limit monitoring and failover trigger detection",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "system_health": "string",
+      "linkedin_rate_limit": {
+        "remaining": "number",
+        "reset_at": "string",
+        "status": "string"
+      },
+      "model_latency": {
+        "avg_response_time_ms": "number",
+        "threshold_exceeded": "boolean"
+      },
+      "failover_triggered": "boolean",
+      "failover_reason": "string",
+      "health_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "system_health": "critical",
+      "linkedin_rate_limit": {
+        "remaining": 0,
+        "reset_at": "2023-10-10T12:00:00Z",
+        "status": "exceeded"
+      },
+      "model_latency": {
+        "avg_response_time_ms": 300,
+        "threshold_exceeded": true
+      },
+      "failover_triggered": true,
+      "failover_reason": "Rate limit exceeded and latency threshold crossed.",
+      "health_summary": "The system is currently facing issues with LinkedIn API rate limits and model response times."
+    },
+    "metadata": {
+      "agent_name": "System Sentinel",
+      "timestamp": "2023-10-10T11:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:58:58.469089",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "system_health": "critical",
+      "linkedin_rate_limit": {
+        "remaining": 0,
+        "reset_at": "2023-10-10T12:00:00Z",
+        "status": "exceeded"
+      },
+      "model_latency": {
+        "avg_response_time_ms": 300,
+        "threshold_exceeded": true
+      },
+      "failover_triggered": true,
+      "failover_reason": "Rate limit exceeded and latency threshold crossed.",
+      "health_summary": "The system is currently facing issues with LinkedIn API rate limits and model response times."
+    },
+    "metadata": {
+      "agent_name": "System Sentinel",
+      "timestamp": "2023-10-10T11:00:00Z"
+    }
+  }
+}

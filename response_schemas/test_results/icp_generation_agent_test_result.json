@@ -1,0 +1,15 @@
+{
+  "agent_name": "ICP Generation Agent",
+  "agent_id": "697ca85c7601d4aab0edc266",
+  "test_message": "Generate ICP for SaaS companies: 100-500 employees, Series B-C stage, AWS/GCP tech stack, high growth",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-30T12:56:43.849535",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "To generate a tailored Ideal Customer Profile (ICP) for SaaS companies, I need to retrieve relevant historical win data to provide you with accurate insights. Let me proceed with that."
+  },
+  "raw_response": "To generate a tailored Ideal Customer Profile (ICP) for SaaS companies, I need to retrieve relevant historical win data to provide you with accurate insights. Let me proceed with that."
+}

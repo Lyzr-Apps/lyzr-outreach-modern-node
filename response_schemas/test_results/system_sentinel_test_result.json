@@ -1,0 +1,32 @@
+{
+  "agent_name": "System Sentinel",
+  "agent_id": "697ca81ad36f070193f5bd4e",
+  "test_message": "Check LinkedIn rate limits: 145/150 daily messages sent, 50 pending in queue",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-30T12:56:12.277058",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "system_health": "healthy",
+      "linkedin_rate_limit": {
+        "remaining": 5,
+        "reset_at": "ISO timestamp",
+        "status": "ok"
+      },
+      "model_latency": {
+        "avg_response_time_ms": 0,
+        "threshold_exceeded": false
+      },
+      "failover_triggered": false,
+      "failover_reason": null,
+      "health_summary": "LinkedIn rate limits are within acceptable thresholds."
+    },
+    "metadata": {
+      "agent_name": "System Sentinel",
+      "timestamp": "ISO timestamp"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"system_health\": \"healthy\",\n    \"linkedin_rate_limit\": {\n      \"remaining\": 5,\n      \"reset_at\": \"ISO timestamp\",\n      \"status\": \"ok\"\n    },\n    \"model_latency\": {\n      \"avg_response_time_ms\": 0,\n      \"threshold_exceeded\": false\n    },\n    \"failover_triggered\": false,\n    \"failover_reason\": null,\n    \"health_summary\": \"LinkedIn rate limits are within acceptable thresholds.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"System Sentinel\",\n    \"timestamp\": \"ISO timestamp\"\n  }\n}"
+}

@@ -1,0 +1,118 @@
+{
+  "agent_name": "Intent Scoring Agent",
+  "agent_id": "697ca77e5e4abfa0b0e16aae",
+  "agent_purpose": "calculator",
+  "description": "Calculate momentum score with decay analysis and intent level classification",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "compound_momentum_score": "number",
+      "intent_level": "string",
+      "signal_breakdown": [
+        {
+          "signal_type": "string",
+          "weight": "number",
+          "timestamp": "string"
+        }
+      ],
+      "decay_analysis": {
+        "recent_signals": "number",
+        "decayed_signals": "number"
+      },
+      "scoring_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "compound_momentum_score": 75,
+      "intent_level": "Warm",
+      "signal_breakdown": [
+        {
+          "signal_type": "web_visit",
+          "weight": 30,
+          "timestamp": "2023-10-01T10:00:00Z"
+        },
+        {
+          "signal_type": "email_open",
+          "weight": 20,
+          "timestamp": "2023-10-02T11:00:00Z"
+        },
+        {
+          "signal_type": "content_download",
+          "weight": 25,
+          "timestamp": "2023-10-03T12:00:00Z"
+        },
+        {
+          "signal_type": "web_visit",
+          "weight": 10,
+          "timestamp": "2023-09-28T09:00:00Z"
+        },
+        {
+          "signal_type": "email_open",
+          "weight": 5,
+          "timestamp": "2023-09-27T08:00:00Z"
+        }
+      ],
+      "decay_analysis": {
+        "recent_signals": 3,
+        "decayed_signals": 2
+      },
+      "scoring_summary": "The score reflects moderate engagement with a combination of recent web visits and email interactions."
+    },
+    "metadata": {
+      "agent_name": "Intent Scoring Agent",
+      "timestamp": "2023-10-04T13:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:58:05.155622",
+  "test_message_used": "Calculate a sample value for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "compound_momentum_score": 75,
+      "intent_level": "Warm",
+      "signal_breakdown": [
+        {
+          "signal_type": "web_visit",
+          "weight": 30,
+          "timestamp": "2023-10-01T10:00:00Z"
+        },
+        {
+          "signal_type": "email_open",
+          "weight": 20,
+          "timestamp": "2023-10-02T11:00:00Z"
+        },
+        {
+          "signal_type": "content_download",
+          "weight": 25,
+          "timestamp": "2023-10-03T12:00:00Z"
+        },
+        {
+          "signal_type": "web_visit",
+          "weight": 10,
+          "timestamp": "2023-09-28T09:00:00Z"
+        },
+        {
+          "signal_type": "email_open",
+          "weight": 5,
+          "timestamp": "2023-09-27T08:00:00Z"
+        }
+      ],
+      "decay_analysis": {
+        "recent_signals": 3,
+        "decayed_signals": 2
+      },
+      "scoring_summary": "The score reflects moderate engagement with a combination of recent web visits and email interactions."
+    },
+    "metadata": {
+      "agent_name": "Intent Scoring Agent",
+      "timestamp": "2023-10-04T13:00:00Z"
+    }
+  }
+}

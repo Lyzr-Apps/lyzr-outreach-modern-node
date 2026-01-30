@@ -1,0 +1,46 @@
+{
+  "agent_name": "Deep Research Agent",
+  "agent_id": "697ca76a5e4abfa0b0e16aa4",
+  "test_message": "Research Acme Corp - analyze recent 10-K filings and LinkedIn executive activity",
+  "expected_purpose": "research",
+  "timestamp": "2026-01-30T12:54:22.064937",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "value_nuggets": [
+        {
+          "source": "10-K",
+          "insight": "Acme Corp has identified a significant increase in supply chain costs, prompting a new vendor evaluation strategy.",
+          "relevance_score": 8
+        },
+        {
+          "source": "LinkedIn",
+          "insight": "The CEO recently shared insights on automation trends, indicating a potential pivot towards investment in new technologies.",
+          "relevance_score": 7
+        }
+      ],
+      "financial_trends": {
+        "revenue_growth": "The company reported a 12% YOY revenue growth, driven by the expansion in digital services.",
+        "strategic_initiatives": [
+          "Investment in AI technologies",
+          "Diversification of product lines"
+        ]
+      },
+      "linkedin_activity": {
+        "engagement_topics": [
+          "Digital transformation",
+          "Sustainability practices"
+        ],
+        "posting_frequency": "Weekly"
+      },
+      "research_summary": "Recent filings and executive discussions reveal Acme Corp is focusing on digital transformation and addressing supply chain challenges, which may open opportunities for partnerships in technology and consulting."
+    },
+    "metadata": {
+      "agent_name": "Deep Research Agent",
+      "timestamp": "2023-10-05T14:55:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"value_nuggets\": [\n      {\"source\": \"10-K\", \"insight\": \"Acme Corp has identified a significant increase in supply chain costs, prompting a new vendor evaluation strategy.\", \"relevance_score\": 8},\n      {\"source\": \"LinkedIn\", \"insight\": \"The CEO recently shared insights on automation trends, indicating a potential pivot towards investment in new technologies.\", \"relevance_score\": 7}\n    ],\n    \"financial_trends\": {\n      \"revenue_growth\": \"The company reported a 12% YOY revenue growth, driven by the expansion in digital services.\",\n      \"strategic_initiatives\": [\"Investment in AI technologies\", \"Diversification of product lines\"]\n    },\n    \"linkedin_activity\": {\n      \"engagement_topics\": [\"Digital transformation\", \"Sustainability practices\"],\n      \"posting_frequency\": \"Weekly\"\n    },\n    \"research_summary\": \"Recent filings and executive discussions reveal Acme Corp is focusing on digital transformation and addressing supply chain challenges, which may open opportunities for partnerships in technology and consulting.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Deep Research Agent\",\n    \"timestamp\": \"2023-10-05T14:55:00Z\"\n  }\n}"
+}

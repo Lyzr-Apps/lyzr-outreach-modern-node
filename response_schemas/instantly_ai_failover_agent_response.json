@@ -1,0 +1,57 @@
+{
+  "agent_name": "Instantly.ai Failover Agent",
+  "agent_id": "697ca8815e4abfa0b0e16aec",
+  "agent_purpose": "assistant",
+  "description": "Email failover when LinkedIn limited with deliverability tracking",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "failover_status": "string",
+      "email_id": "string",
+      "recipient_email": "string",
+      "sent_at": "string",
+      "deliverability_score": "number",
+      "failover_reason": "string",
+      "failover_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "failover_status": "sent",
+      "email_id": "email-123456",
+      "recipient_email": "example@domain.com",
+      "sent_at": "2023-10-01T12:00:00Z",
+      "deliverability_score": 98,
+      "failover_reason": "LinkedIn rate limit reached",
+      "failover_summary": "Plain-text email sent successfully through Instantly.ai"
+    },
+    "metadata": {
+      "agent_name": "Instantly.ai Failover Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:59:32.236232",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "failover_status": "sent",
+      "email_id": "email-123456",
+      "recipient_email": "example@domain.com",
+      "sent_at": "2023-10-01T12:00:00Z",
+      "deliverability_score": 98,
+      "failover_reason": "LinkedIn rate limit reached",
+      "failover_summary": "Plain-text email sent successfully through Instantly.ai"
+    },
+    "metadata": {
+      "agent_name": "Instantly.ai Failover Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "agent_name": "LinkedIn Delivery Agent",
+  "agent_id": "697ca86ed36f070193f5bd58",
+  "test_message": "Send approved message to John Smith on LinkedIn: 'Hey John - saw Acme's growth. Bet AWS bills are challenging. Quick chat?'",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-30T12:56:46.797227",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "delivery_status": "sent",
+      "message_id": "msg-123456",
+      "recipient": "John Smith",
+      "sent_at": "2023-10-04T12:34:56Z",
+      "timing_delay_applied": 145,
+      "proxy_used": true,
+      "delivery_summary": "Message successfully sent to John Smith"
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Delivery Agent",
+      "timestamp": "2023-10-04T12:35:01Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"delivery_status\": \"sent\",\n    \"message_id\": \"msg-123456\",\n    \"recipient\": \"John Smith\",\n    \"sent_at\": \"2023-10-04T12:34:56Z\",\n    \"timing_delay_applied\": 145,\n    \"proxy_used\": true,\n    \"delivery_summary\": \"Message successfully sent to John Smith\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"LinkedIn Delivery Agent\",\n    \"timestamp\": \"2023-10-04T12:35:01Z\"\n  }\n}"
+}

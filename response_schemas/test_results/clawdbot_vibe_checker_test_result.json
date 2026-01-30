@@ -1,0 +1,36 @@
+{
+  "agent_name": "Clawdbot Vibe Checker",
+  "agent_id": "697ca7edd36f070193f5bd3f",
+  "test_message": "Check this draft: 'Hey John - saw Acme's growth trajectory. Bet AWS bills are eye-watering. We cut infra costs 40% for Series B teams. 15min chat?'",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-30T12:55:49.368466",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "verdict": "fail",
+      "violations": [
+        {
+          "type": "forbidden_word",
+          "detail": "The phrase 'cut infra costs' includes corporate jargon."
+        },
+        {
+          "type": "style_mismatch",
+          "detail": "The message lacks a warm, personable tone."
+        }
+      ],
+      "style_dna_match_score": "55",
+      "recommendations": [
+        "Replace 'cut infra costs' with more casual language.",
+        "Add a friendly greeting or closing to enhance warmth."
+      ],
+      "audit_summary": "The draft contains a forbidden phrase and lacks the desired tone for a casual message."
+    },
+    "metadata": {
+      "agent_name": "Clawdbot Vibe Checker",
+      "timestamp": "2023-10-03T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"verdict\": \"fail\",\n    \"violations\": [\n      {\n        \"type\": \"forbidden_word\",\n        \"detail\": \"The phrase 'cut infra costs' includes corporate jargon.\"\n      },\n      {\n        \"type\": \"style_mismatch\",\n        \"detail\": \"The message lacks a warm, personable tone.\"\n      }\n    ],\n    \"style_dna_match_score\": \"55\",\n    \"recommendations\": [\n      \"Replace 'cut infra costs' with more casual language.\",\n      \"Add a friendly greeting or closing to enhance warmth.\"\n    ],\n    \"audit_summary\": \"The draft contains a forbidden phrase and lacks the desired tone for a casual message.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Clawdbot Vibe Checker\",\n    \"timestamp\": \"2023-10-03T12:00:00Z\"\n  }\n}"
+}

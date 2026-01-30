@@ -1,0 +1,33 @@
+{
+  "agent_name": "Response Classifier Agent",
+  "agent_id": "697ca896066158e77fde4343",
+  "agent_purpose": "analyzer",
+  "description": "Categorize incoming replies with sentiment analysis and recommended actions",
+  "response_schema": {
+    "status": "string",
+    "result": {},
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {},
+    "metadata": {
+      "agent_name": "Response Classifier Agent",
+      "timestamp": "2023-10-03T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:59:33.838532",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {},
+    "metadata": {
+      "agent_name": "Response Classifier Agent",
+      "timestamp": "2023-10-03T12:00:00Z"
+    }
+  }
+}

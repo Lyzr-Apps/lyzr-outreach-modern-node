@@ -1,0 +1,62 @@
+{
+  "agent_name": "Memo Synthesis Agent",
+  "agent_id": "697ca79a7601d4aab0edc237",
+  "agent_purpose": "analyzer",
+  "description": "SCR-framework consulting diagnosis with pain point identification",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "scr_memo": {
+        "situation": "string",
+        "complication": "string",
+        "resolution": "string"
+      },
+      "retrieved_assets": [
+        "any"
+      ],
+      "primary_pain_point": "string",
+      "memo_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "scr_memo": {
+        "situation": "No specific data was provided to analyze the sample.",
+        "complication": "Without sample data, it is not possible to identify challenges or pain points.",
+        "resolution": "To proceed, please provide detailed sample data for analysis."
+      },
+      "retrieved_assets": [],
+      "primary_pain_point": "Lack of sample data for analysis.",
+      "memo_summary": "Unable to generate analysis without sample data."
+    },
+    "metadata": {
+      "agent_name": "Memo Synthesis Agent",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:58:08.429205",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "scr_memo": {
+        "situation": "No specific data was provided to analyze the sample.",
+        "complication": "Without sample data, it is not possible to identify challenges or pain points.",
+        "resolution": "To proceed, please provide detailed sample data for analysis."
+      },
+      "retrieved_assets": [],
+      "primary_pain_point": "Lack of sample data for analysis.",
+      "memo_summary": "Unable to generate analysis without sample data."
+    },
+    "metadata": {
+      "agent_name": "Memo Synthesis Agent",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  }
+}

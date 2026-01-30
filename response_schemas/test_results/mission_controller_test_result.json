@@ -1,0 +1,15 @@
+{
+  "agent_name": "Mission Controller",
+  "agent_id": "697ca914066158e77fde4351",
+  "test_message": "Launch campaign for SaaS companies with 100-500 employees using AWS, targeting efficiency lens",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-30T12:53:11.080743",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "Could you please provide specific details regarding the target personas you want to focus on within the SaaS companies? This includes roles (e.g., IT managers, CTOs, etc.), geographic regions, or any additional parameters that may help refine the lead intelligence gathering process."
+  },
+  "raw_response": "Could you please provide specific details regarding the target personas you want to focus on within the SaaS companies? This includes roles (e.g., IT managers, CTOs, etc.), geographic regions, or any additional parameters that may help refine the lead intelligence gathering process."
+}

@@ -1,0 +1,54 @@
+{
+  "agent_name": "Enrichment Agent",
+  "agent_id": "697ca7597601d4aab0edc20b",
+  "agent_purpose": "analyzer",
+  "description": "Firmographic and technographic enrichment - returns plain text responses describing process steps",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "analysis": "string",
+      "findings": [
+        {
+          "title": "string",
+          "description": "string",
+          "severity": "string (low|medium|high)"
+        }
+      ],
+      "score": "number (optional, 0-100)",
+      "recommendations": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "analysis": "Comprehensive analysis of the provided data",
+      "findings": [
+        {
+          "title": "Key Finding 1",
+          "description": "Important observation",
+          "severity": "high"
+        }
+      ],
+      "score": 85,
+      "recommendations": [
+        "Consider optimizing X",
+        "Review Y for improvements"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Enrichment Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  },
+  "is_actual_tested": false,
+  "test_timestamp": null,
+  "test_message_used": "Analyze this sample data for testing",
+  "raw_test_response": "Please provide the sample data you would like analyzed.",
+  "test_error": "Response not valid JSON: Expecting value: line 1 column 1 (char 0)"
+}

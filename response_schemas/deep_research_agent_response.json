@@ -1,0 +1,112 @@
+{
+  "agent_name": "Deep Research Agent",
+  "agent_id": "697ca76a5e4abfa0b0e16aa4",
+  "agent_purpose": "research",
+  "description": "10-K analysis and LinkedIn activity scanning with structured research output",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "value_nuggets": [
+        {
+          "source": "string",
+          "insight": "string",
+          "relevance_score": "number"
+        }
+      ],
+      "financial_trends": {
+        "revenue_growth": "string",
+        "strategic_initiatives": [
+          "string"
+        ]
+      },
+      "linkedin_activity": {
+        "engagement_topics": [
+          "string"
+        ],
+        "posting_frequency": "string"
+      },
+      "research_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "value_nuggets": [
+        {
+          "source": "10-K",
+          "insight": "The company is increasing investment in renewable energy initiatives, indicating a shift towards sustainable practices.",
+          "relevance_score": 8
+        },
+        {
+          "source": "LinkedIn",
+          "insight": "Recent posts highlight a focus on digital transformation, suggesting potential pain points in legacy systems.",
+          "relevance_score": 7
+        }
+      ],
+      "financial_trends": {
+        "revenue_growth": "15% year-over-year growth attributed to new product launches.",
+        "strategic_initiatives": [
+          "Expansion into emerging markets",
+          "Strategic partnerships with technology firms"
+        ]
+      },
+      "linkedin_activity": {
+        "engagement_topics": [
+          "sustainability",
+          "digital transformation",
+          "technology partnerships"
+        ],
+        "posting_frequency": "Weekly"
+      },
+      "research_summary": "The company is actively pursuing growth through sustainability and digital transformation, presenting multiple avenues for engagement."
+    },
+    "metadata": {
+      "agent_name": "Deep Research Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:57:59.478612",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "value_nuggets": [
+        {
+          "source": "10-K",
+          "insight": "The company is increasing investment in renewable energy initiatives, indicating a shift towards sustainable practices.",
+          "relevance_score": 8
+        },
+        {
+          "source": "LinkedIn",
+          "insight": "Recent posts highlight a focus on digital transformation, suggesting potential pain points in legacy systems.",
+          "relevance_score": 7
+        }
+      ],
+      "financial_trends": {
+        "revenue_growth": "15% year-over-year growth attributed to new product launches.",
+        "strategic_initiatives": [
+          "Expansion into emerging markets",
+          "Strategic partnerships with technology firms"
+        ]
+      },
+      "linkedin_activity": {
+        "engagement_topics": [
+          "sustainability",
+          "digital transformation",
+          "technology partnerships"
+        ],
+        "posting_frequency": "Weekly"
+      },
+      "research_summary": "The company is actively pursuing growth through sustainability and digital transformation, presenting multiple avenues for engagement."
+    },
+    "metadata": {
+      "agent_name": "Deep Research Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  }
+}

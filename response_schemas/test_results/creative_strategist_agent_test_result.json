@@ -1,0 +1,29 @@
+{
+  "agent_name": "Creative Strategist Agent",
+  "agent_id": "697ca803066158e77fde4335",
+  "test_message": "Generate LinkedIn Ad Brief targeting VP Engineering personas with pain points around cloud cost optimization",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-30T12:55:54.501887",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "ad_brief": {
+        "target_audience": "VP Engineering professionals in mid to large-sized tech companies",
+        "narrative_hook": "Transform your cloud spending into a strategic advantage.",
+        "pain_point": "Struggling with unpredictable cloud costs that eat into your engineering budget.",
+        "value_proposition": "Unlock significant savings while optimizing performance with our cloud cost management solutions.",
+        "cta": "Discover how to minimize cloud costs today!",
+        "creative_concept": "Showcase a split-screen video: on one side, a frustrated VP engineers looking at spiraling cloud costs; on the other, a satisfied VP enjoying savings and performance gains after implementation of our solution."
+      },
+      "retrieved_playbooks": [],
+      "brief_summary": "This ad brief targets VP Engineering personas, addressing their challenges with cloud cost optimization and presenting a compelling solution with a clear call to action."
+    },
+    "metadata": {
+      "agent_name": "Creative Strategist Agent",
+      "timestamp": "2023-10-12T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"ad_brief\": {\n      \"target_audience\": \"VP Engineering professionals in mid to large-sized tech companies\",\n      \"narrative_hook\": \"Transform your cloud spending into a strategic advantage.\",\n      \"pain_point\": \"Struggling with unpredictable cloud costs that eat into your engineering budget.\",\n      \"value_proposition\": \"Unlock significant savings while optimizing performance with our cloud cost management solutions.\",\n      \"cta\": \"Discover how to minimize cloud costs today!\",\n      \"creative_concept\": \"Showcase a split-screen video: on one side, a frustrated VP engineers looking at spiraling cloud costs; on the other, a satisfied VP enjoying savings and performance gains after implementation of our solution.\"\n    },\n    \"retrieved_playbooks\": [],\n    \"brief_summary\": \"This ad brief targets VP Engineering personas, addressing their challenges with cloud cost optimization and presenting a compelling solution with a clear call to action.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Creative Strategist Agent\",\n    \"timestamp\": \"2023-10-12T12:00:00Z\"\n  }\n}"
+}

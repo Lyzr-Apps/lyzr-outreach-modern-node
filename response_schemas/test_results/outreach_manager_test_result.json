@@ -1,0 +1,25 @@
+{
+  "agent_name": "Outreach Manager",
+  "agent_id": "697ca8de066158e77fde4347",
+  "test_message": "Create outreach for John Smith, VP Engineering at Acme Corp, pain point: infrastructure scaling costs",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-30T12:55:42.328648",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "message_approved": true,
+      "draft_iterations": 5,
+      "vibe_check_verdict": "pass",
+      "creative_brief_generated": false,
+      "final_message": "Hey! I\u2019ve been thinking about the ups and downs of scaling systems. It can be a real puzzle, right? Would love to hear how you\u2019re handling it or share some ideas to make things smoother!",
+      "coordination_summary": "The outreach message was refined through several iterations to ensure it met quality standards and engaged John Smith effectively while avoiding jargon."
+    },
+    "metadata": {
+      "agent_name": "Outreach Manager",
+      "timestamp": "2023-10-05T12:45:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"message_approved\": true,\n    \"draft_iterations\": 5,\n    \"vibe_check_verdict\": \"pass\",\n    \"creative_brief_generated\": false,\n    \"final_message\": \"Hey! I\u2019ve been thinking about the ups and downs of scaling systems. It can be a real puzzle, right? Would love to hear how you\u2019re handling it or share some ideas to make things smoother!\",\n    \"coordination_summary\": \"The outreach message was refined through several iterations to ensure it met quality standards and engaged John Smith effectively while avoiding jargon.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Outreach Manager\",\n    \"timestamp\": \"2023-10-05T12:45:00Z\"\n  }\n}"
+}

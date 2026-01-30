@@ -1,0 +1,33 @@
+{
+  "agent_name": "HubSpot Sync Agent",
+  "agent_id": "697ca8305e4abfa0b0e16ae0",
+  "test_message": "Sync contact: John Smith, Acme Corp, Momentum Score: 87, Primary Pain Point: Infrastructure scaling costs",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-30T12:56:37.309847",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "sync_action": "write",
+      "contact_id": "12345",
+      "fields_updated": [
+        {
+          "field_name": "Lyzr_Momentum_Score",
+          "value": 87
+        },
+        {
+          "field_name": "Primary_Pain_Point",
+          "value": "Infrastructure scaling costs"
+        }
+      ],
+      "sync_status": "completed",
+      "sync_summary": "Successfully updated contact scores and pain points."
+    },
+    "metadata": {
+      "agent_name": "HubSpot Sync Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"sync_action\": \"write\",\n    \"contact_id\": \"12345\",\n    \"fields_updated\": [\n      {\n        \"field_name\": \"Lyzr_Momentum_Score\",\n        \"value\": 87\n      },\n      {\n        \"field_name\": \"Primary_Pain_Point\",\n        \"value\": \"Infrastructure scaling costs\"\n      }\n    ],\n    \"sync_status\": \"completed\",\n    \"sync_summary\": \"Successfully updated contact scores and pain points.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"HubSpot Sync Agent\",\n    \"timestamp\": \"2023-10-01T12:00:00Z\"\n  }\n}"
+}

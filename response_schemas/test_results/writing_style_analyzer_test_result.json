@@ -1,0 +1,15 @@
+{
+  "agent_name": "Writing Style Analyzer",
+  "agent_id": "697ca8475e4abfa0b0e16ae4",
+  "test_message": "Analyze writing style from recent sent emails and extract Style DNA profile",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-30T12:56:42.261999",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "It seems that there is an issue retrieving your sent emails for analysis. Please ensure that the Gmail API is accessible and try again."
+  },
+  "raw_response": "It seems that there is an issue retrieving your sent emails for analysis. Please ensure that the Gmail API is accessible and try again."
+}

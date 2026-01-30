@@ -1,0 +1,43 @@
+{
+  "agent_name": "Intent Scoring Agent",
+  "agent_id": "697ca77e5e4abfa0b0e16aae",
+  "test_message": "Calculate momentum for: website visit (3 days ago), content download (1 day ago), pricing page view (today)",
+  "expected_purpose": "calculator",
+  "timestamp": "2026-01-30T12:54:29.789466",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "compound_momentum_score": 85,
+      "intent_level": "Hot",
+      "signal_breakdown": [
+        {
+          "signal_type": "website visit",
+          "weight": 20,
+          "timestamp": "2023-10-30T10:00:00Z"
+        },
+        {
+          "signal_type": "content download",
+          "weight": 30,
+          "timestamp": "2023-11-01T10:00:00Z"
+        },
+        {
+          "signal_type": "pricing page view",
+          "weight": 35,
+          "timestamp": "2023-11-01T12:00:00Z"
+        }
+      ],
+      "decay_analysis": {
+        "recent_signals": 2,
+        "decayed_signals": 1
+      },
+      "scoring_summary": "The user has shown immediate engagement by viewing the pricing page today, complemented by recent content download and a website visit."
+    },
+    "metadata": {
+      "agent_name": "Intent Scoring Agent",
+      "timestamp": "2023-11-01T12:05:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"compound_momentum_score\": 85,\n    \"intent_level\": \"Hot\",\n    \"signal_breakdown\": [\n      {\n        \"signal_type\": \"website visit\",\n        \"weight\": 20,\n        \"timestamp\": \"2023-10-30T10:00:00Z\"\n      },\n      {\n        \"signal_type\": \"content download\",\n        \"weight\": 30,\n        \"timestamp\": \"2023-11-01T10:00:00Z\"\n      },\n      {\n        \"signal_type\": \"pricing page view\",\n        \"weight\": 35,\n        \"timestamp\": \"2023-11-01T12:00:00Z\"\n      }\n    ],\n    \"decay_analysis\": {\n      \"recent_signals\": 2,\n      \"decayed_signals\": 1\n    },\n    \"scoring_summary\": \"The user has shown immediate engagement by viewing the pricing page today, complemented by recent content download and a website visit.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Intent Scoring Agent\",\n    \"timestamp\": \"2023-11-01T12:05:00Z\"\n  }\n}"
+}

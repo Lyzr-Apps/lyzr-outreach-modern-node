@@ -1,0 +1,89 @@
+{
+  "agent_name": "Creative Strategist Agent",
+  "agent_id": "697ca803066158e77fde4335",
+  "agent_purpose": "assistant",
+  "description": "LinkedIn Ad Brief generation with creative concepts and targeting",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "ad_brief": {
+        "target_audience": "string",
+        "narrative_hook": "string",
+        "pain_point": "string",
+        "value_proposition": "string",
+        "cta": "string",
+        "creative_concept": "string"
+      },
+      "retrieved_playbooks": [
+        {
+          "title": "string",
+          "relevance": "string"
+        }
+      ],
+      "brief_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "ad_brief": {
+        "target_audience": "Small business owners looking to enhance their online presence",
+        "narrative_hook": "Transform your business with our powerful digital marketing solutions!",
+        "pain_point": "Struggling to attract customers online and increase sales?",
+        "value_proposition": "Our tailored marketing strategies drive measurable results and grow your business.",
+        "cta": "Sign up for a free consultation today!",
+        "creative_concept": "A split-screen visual showing before and after results of a client's online presence, highlighting growth metrics."
+      },
+      "retrieved_playbooks": [
+        {
+          "title": "Digital Marketing Success Stories",
+          "relevance": "Provides case studies of small businesses that effectively increased their online visibility."
+        },
+        {
+          "title": "Effective Call-to-Actions",
+          "relevance": "Guidelines on how to create engaging CTAs that convert prospects into customers."
+        }
+      ],
+      "brief_summary": "This ad brief targets small business owners with a hook emphasizing transformation through digital marketing, addressing the pain of low online engagement, and offering a free consultation as a call-to-action."
+    },
+    "metadata": {
+      "agent_name": "Creative Strategist Agent",
+      "timestamp": "2023-10-03T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:58:45.092231",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "ad_brief": {
+        "target_audience": "Small business owners looking to enhance their online presence",
+        "narrative_hook": "Transform your business with our powerful digital marketing solutions!",
+        "pain_point": "Struggling to attract customers online and increase sales?",
+        "value_proposition": "Our tailored marketing strategies drive measurable results and grow your business.",
+        "cta": "Sign up for a free consultation today!",
+        "creative_concept": "A split-screen visual showing before and after results of a client's online presence, highlighting growth metrics."
+      },
+      "retrieved_playbooks": [
+        {
+          "title": "Digital Marketing Success Stories",
+          "relevance": "Provides case studies of small businesses that effectively increased their online visibility."
+        },
+        {
+          "title": "Effective Call-to-Actions",
+          "relevance": "Guidelines on how to create engaging CTAs that convert prospects into customers."
+        }
+      ],
+      "brief_summary": "This ad brief targets small business owners with a hook emphasizing transformation through digital marketing, addressing the pain of low online engagement, and offering a free consultation as a call-to-action."
+    },
+    "metadata": {
+      "agent_name": "Creative Strategist Agent",
+      "timestamp": "2023-10-03T12:00:00Z"
+    }
+  }
+}

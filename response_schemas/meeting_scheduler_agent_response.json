@@ -1,0 +1,56 @@
+{
+  "agent_name": "Meeting Scheduler Agent",
+  "agent_id": "697ca8abd36f070193f5bd59",
+  "agent_purpose": "assistant",
+  "description": "Propose Calendly times - returns plain text responses requesting additional availability information",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "proposed_times": [
+        "any"
+      ],
+      "calendly_event_id": "null",
+      "event_status": "string",
+      "meeting_link": "null",
+      "lead_timezone": "string",
+      "scheduling_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "proposed_times": [],
+      "calendly_event_id": null,
+      "event_status": "failed",
+      "meeting_link": null,
+      "lead_timezone": "",
+      "scheduling_summary": "Sample response requested but no context provided."
+    },
+    "metadata": {
+      "agent_name": "Meeting Scheduler Agent",
+      "timestamp": "2023-10-04T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:59:40.710629",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "proposed_times": [],
+      "calendly_event_id": null,
+      "event_status": "failed",
+      "meeting_link": null,
+      "lead_timezone": "",
+      "scheduling_summary": "Sample response requested but no context provided."
+    },
+    "metadata": {
+      "agent_name": "Meeting Scheduler Agent",
+      "timestamp": "2023-10-04T12:00:00Z"
+    }
+  }
+}

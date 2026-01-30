@@ -1,0 +1,15 @@
+{
+  "agent_name": "Signal Processing Manager",
+  "agent_id": "697ca8c55e4abfa0b0e16af6",
+  "test_message": "Process signal for Acme Corp - Series B SaaS, 250 employees, AWS tech stack",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-30T12:53:12.824823",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "Could you please confirm if you want a complete intelligence report for Acme Corp? Additionally, do you have any specific focus areas or particular information you want me to prioritize in the analysis?"
+  },
+  "raw_response": "Could you please confirm if you want a complete intelligence report for Acme Corp? Additionally, do you have any specific focus areas or particular information you want me to prioritize in the analysis?"
+}

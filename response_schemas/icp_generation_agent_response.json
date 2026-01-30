@@ -1,0 +1,140 @@
+{
+  "agent_name": "ICP Generation Agent",
+  "agent_id": "697ca85c7601d4aab0edc266",
+  "agent_purpose": "assistant",
+  "description": "Generate ICP JSON from historical data - returns plain text responses about data retrieval process",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "icp_profile": {
+        "company_demographics": {
+          "industry": [
+            "string"
+          ],
+          "employee_range": "string",
+          "revenue_range": "string"
+        },
+        "technographic_stack": [
+          "string"
+        ],
+        "buyer_personas": [
+          {
+            "title": "string",
+            "department": "string",
+            "seniority": "string"
+          }
+        ],
+        "pain_points": [
+          "string"
+        ],
+        "engagement_triggers": [
+          "string"
+        ]
+      },
+      "historical_wins_analyzed": "string",
+      "confidence_score": "string",
+      "icp_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "icp_profile": {
+        "company_demographics": {
+          "industry": [
+            "Software",
+            "Technology"
+          ],
+          "employee_range": "51-200",
+          "revenue_range": "$10M-$50M"
+        },
+        "technographic_stack": [
+          "AWS",
+          "Salesforce",
+          "HubSpot"
+        ],
+        "buyer_personas": [
+          {
+            "title": "Chief Technology Officer",
+            "department": "Technology",
+            "seniority": "C-Level"
+          },
+          {
+            "title": "Marketing Manager",
+            "department": "Marketing",
+            "seniority": "Mid-Level"
+          }
+        ],
+        "pain_points": [
+          "Integration challenges",
+          "Data silos"
+        ],
+        "engagement_triggers": [
+          "New product launch",
+          "Funding rounds"
+        ]
+      },
+      "historical_wins_analyzed": "50",
+      "confidence_score": "85",
+      "icp_summary": "Companies in the software industry with a mid-sized employee base are ideal targets, demonstrating engagement during product launches and funding rounds."
+    },
+    "metadata": {
+      "agent_name": "ICP Generation Agent",
+      "timestamp": "2023-10-04T12:34:56Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:59:26.989803",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "icp_profile": {
+        "company_demographics": {
+          "industry": [
+            "Software",
+            "Technology"
+          ],
+          "employee_range": "51-200",
+          "revenue_range": "$10M-$50M"
+        },
+        "technographic_stack": [
+          "AWS",
+          "Salesforce",
+          "HubSpot"
+        ],
+        "buyer_personas": [
+          {
+            "title": "Chief Technology Officer",
+            "department": "Technology",
+            "seniority": "C-Level"
+          },
+          {
+            "title": "Marketing Manager",
+            "department": "Marketing",
+            "seniority": "Mid-Level"
+          }
+        ],
+        "pain_points": [
+          "Integration challenges",
+          "Data silos"
+        ],
+        "engagement_triggers": [
+          "New product launch",
+          "Funding rounds"
+        ]
+      },
+      "historical_wins_analyzed": "50",
+      "confidence_score": "85",
+      "icp_summary": "Companies in the software industry with a mid-sized employee base are ideal targets, demonstrating engagement during product launches and funding rounds."
+    },
+    "metadata": {
+      "agent_name": "ICP Generation Agent",
+      "timestamp": "2023-10-04T12:34:56Z"
+    }
+  }
+}

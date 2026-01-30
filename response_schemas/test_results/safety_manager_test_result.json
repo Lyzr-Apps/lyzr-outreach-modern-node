@@ -1,0 +1,32 @@
+{
+  "agent_name": "Safety Manager",
+  "agent_id": "697ca8f47601d4aab0edc279",
+  "test_message": "Monitor system: 150 LinkedIn messages sent today, 250 message queue",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-30T12:56:09.565923",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "system_health": "degraded",
+      "linkedin_rate_limit": {
+        "remaining": 50,
+        "reset_at": "ISO timestamp",
+        "status": "warning"
+      },
+      "model_latency": {
+        "avg_response_time_ms": 150,
+        "threshold_exceeded": false
+      },
+      "failover_triggered": true,
+      "failover_reason": "LinkedIn rate limit approaching",
+      "health_summary": "Failover triggered due to low LinkedIn API message quota."
+    },
+    "metadata": {
+      "agent_name": "System Sentinel",
+      "timestamp": "ISO timestamp"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"system_health\": \"degraded\",\n    \"linkedin_rate_limit\": {\n      \"remaining\": 50,\n      \"reset_at\": \"ISO timestamp\",\n      \"status\": \"warning\"\n    },\n    \"model_latency\": {\n      \"avg_response_time_ms\": 150,\n      \"threshold_exceeded\": false\n    },\n    \"failover_triggered\": true,\n    \"failover_reason\": \"LinkedIn rate limit approaching\",\n    \"health_summary\": \"Failover triggered due to low LinkedIn API message quota.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"System Sentinel\",\n    \"timestamp\": \"ISO timestamp\"\n  }\n}"
+}

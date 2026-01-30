@@ -1,0 +1,53 @@
+{
+  "agent_name": "HubSpot Sync Agent",
+  "agent_id": "697ca8305e4abfa0b0e16ae0",
+  "agent_purpose": "assistant",
+  "description": "CRM bidirectional sync with field update tracking",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "sync_action": "string",
+      "contact_id": "string",
+      "fields_updated": [
+        "any"
+      ],
+      "sync_status": "string",
+      "sync_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "sync_action": "read",
+      "contact_id": "",
+      "fields_updated": [],
+      "sync_status": "failed",
+      "sync_summary": "Sample response not available for this request."
+    },
+    "metadata": {
+      "agent_name": "HubSpot Sync Agent",
+      "timestamp": "2023-10-05T14:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:59:21.149833",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "sync_action": "read",
+      "contact_id": "",
+      "fields_updated": [],
+      "sync_status": "failed",
+      "sync_summary": "Sample response not available for this request."
+    },
+    "metadata": {
+      "agent_name": "HubSpot Sync Agent",
+      "timestamp": "2023-10-05T14:00:00Z"
+    }
+  }
+}

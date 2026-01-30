@@ -1,0 +1,15 @@
+{
+  "agent_name": "Enrichment Agent",
+  "agent_id": "697ca7597601d4aab0edc20b",
+  "test_message": "Enrich data for company: Acme Corp, domain: acmecorp.com",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-30T12:54:16.278719",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "Before proceeding with the enrichment process, I'll perform the necessary steps to gather firmographic data, analyze technographics, and verify the email address."
+  },
+  "raw_response": "Before proceeding with the enrichment process, I'll perform the necessary steps to gather firmographic data, analyze technographics, and verify the email address."
+}

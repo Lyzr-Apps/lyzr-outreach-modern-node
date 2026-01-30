@@ -1,0 +1,39 @@
+{
+  "step": "agent_creation",
+  "status": "complete",
+  "timestamp": "2026-01-30T00:00:00Z",
+  "agents_created": 18,
+  "agents": {
+    "mission_controller": "697ca914066158e77fde4351",
+    "signal_processing_manager": "697ca8c55e4abfa0b0e16af6",
+    "enrichment_agent": "697ca7597601d4aab0edc20b",
+    "deep_research_agent": "697ca76a5e4abfa0b0e16aa4",
+    "intent_scoring_agent": "697ca77e5e4abfa0b0e16aae",
+    "memo_synthesis_agent": "697ca79a7601d4aab0edc237",
+    "outreach_manager": "697ca8de066158e77fde4347",
+    "message_writer_agent": "697ca7d87601d4aab0edc24a",
+    "clawdbot_vibe_checker": "697ca7edd36f070193f5bd3f",
+    "creative_strategist_agent": "697ca803066158e77fde4335",
+    "safety_manager": "697ca8f47601d4aab0edc279",
+    "system_sentinel": "697ca81ad36f070193f5bd4e",
+    "hubspot_sync_agent": "697ca8305e4abfa0b0e16ae0",
+    "writing_style_analyzer": "697ca8475e4abfa0b0e16ae4",
+    "icp_generation_agent": "697ca85c7601d4aab0edc266",
+    "linkedin_delivery_agent": "697ca86ed36f070193f5bd58",
+    "instantly_ai_failover_agent": "697ca8815e4abfa0b0e16aec",
+    "response_classifier_agent": "697ca896066158e77fde4343",
+    "meeting_scheduler_agent": "697ca8abd36f070193f5bd59"
+  },
+  "knowledge_bases": {
+    "context_board_signal_intelligence": {
+      "rag_id": "697ca749fd1daac38e53c01b",
+      "rag_name": "contextboardsignalintelligenceru1x"
+    },
+    "context_board_outreach_creative": {
+      "rag_id": "697ca749fd1daac38e53c01c",
+      "rag_name": "contextboardoutreachcreativefe6x"
+    }
+  },
+  "response_schemas_saved": 18,
+  "next_step": "agent_testing"
+}

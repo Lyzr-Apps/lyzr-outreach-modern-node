@@ -1,0 +1,15 @@
+{
+  "agent_name": "Meeting Scheduler Agent",
+  "agent_id": "697ca8abd36f070193f5bd59",
+  "test_message": "Schedule meeting with John Smith, timezone: America/Los_Angeles, preferred times: afternoons next week",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-30T12:56:58.502462",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "To confirm the scheduling, could you please provide me with your availability for afternoons next week in Pacific Time (America/Los_Angeles)?  This will help me propose suitable time slots for the meeting with John Smith."
+  },
+  "raw_response": "To confirm the scheduling, could you please provide me with your availability for afternoons next week in Pacific Time (America/Los_Angeles)?  This will help me propose suitable time slots for the meeting with John Smith."
+}

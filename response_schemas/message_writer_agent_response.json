@@ -1,0 +1,53 @@
+{
+  "agent_name": "Message Writer Agent",
+  "agent_id": "697ca7d87601d4aab0edc24a",
+  "agent_purpose": "assistant",
+  "description": "Draft 50-word Text-a-Friend messages with style DNA application",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "message_draft": "string",
+      "word_count": "number",
+      "style_dna_applied": [
+        "any"
+      ],
+      "value_nugget_referenced": "string",
+      "tone_assessment": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "message_draft": "I'm here to write personalized messages for you! Just let me know the context and any details you'd like included, and I'll craft something using your Style DNA.",
+      "word_count": 27,
+      "style_dna_applied": [],
+      "value_nugget_referenced": "",
+      "tone_assessment": "informal, friendly"
+    },
+    "metadata": {
+      "agent_name": "Message Writer Agent",
+      "timestamp": "2023-10-04T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T12:58:37.898494",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "message_draft": "I'm here to write personalized messages for you! Just let me know the context and any details you'd like included, and I'll craft something using your Style DNA.",
+      "word_count": 27,
+      "style_dna_applied": [],
+      "value_nugget_referenced": "",
+      "tone_assessment": "informal, friendly"
+    },
+    "metadata": {
+      "agent_name": "Message Writer Agent",
+      "timestamp": "2023-10-04T12:00:00Z"
+    }
+  }
+}
